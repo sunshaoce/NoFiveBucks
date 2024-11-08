@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Middle Click to Close Tab",
+  "version": "1.0",
+  "description": "Close tabs by middle-clicking anywhere on the page.",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
