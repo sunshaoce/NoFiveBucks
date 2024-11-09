@@ -1,8 +1,9 @@
 document.addEventListener("dblclick", (event) => {
+  const includeElements = ['DIV', 'BODY', 'HTML'];
   const excludeElements = ['INPUT', 'TEXTAREA', 'BUTTON', 'SELECT', 'A', 'LABEL'];
 
   if (
-    (event.target.tagName === 'DIV' || event.target.tagName === 'BODY') &&
+    includeElements.includes(event.target.tagName) &&
     !excludeElements.includes(event.target.tagName)
   ) {
     chrome.runtime.sendMessage({ action: "closeTab" });
