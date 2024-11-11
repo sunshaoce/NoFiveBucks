@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Close tabs by double-clicking empty area on the page.",
   "permissions": [
-    "tabs"
+    "activeTab"
   ],
   "background": {
     "service_worker": "background.js"

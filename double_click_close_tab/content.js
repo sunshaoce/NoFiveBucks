@@ -1,6 +1,6 @@
 document.addEventListener("dblclick", (event) => {
-  const includeElements = ['DIV', 'BODY', 'HTML'];
-  const excludeElements = ['INPUT', 'TEXTAREA', 'BUTTON', 'SELECT', 'A', 'LABEL'];
+  const includeElements = ['DIV', 'BODY', 'HTML', 'TITLE'];
+  const excludeElements = ['INPUT', 'TEXTAREA', 'BUTTON', 'SELECT', 'A', 'LABEL', 'TABLE'];
 
   if (
     includeElements.includes(event.target.tagName) &&
